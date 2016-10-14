@@ -1,3 +1,8 @@
+# This script goes through the Synxis files and merges them
+# It will try to match on phone number from a googlesheet containing booking info
+# It has a separate section that spits out the projected value based on different attributes of a guest
+# todo: match on ID rather than phone and get that data from Stripe instead of the googlesheet
+
 # Loop through the csv files in the working directory
 temp = list.files(pattern="*.csv")
 for (i in 1:length(temp)) assign(temp[i], read.csv(temp[i])) # imports them all as data frames
